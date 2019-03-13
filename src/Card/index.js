@@ -34,12 +34,18 @@ const Wrapper = styled.div`
 const Link = styled.a`
   text-align: center;
   font-size: 0.75rem;  
-  margin: 1em 0;
   color: #0096D7;
   text-decoration: none;
   :hover {
     color: #004697;
   }
+`;
+
+const LinkWrapper = styled.div`
+  font-size: 0.75rem; 
+  margin: 0.85em 0 1.4em 0;
+  display: flex;
+  justify-content: center;
 `;
 
 const RequestInfo = styled.div`
@@ -156,8 +162,10 @@ class Card extends Component {
           <span>{this.state.offerCount}  profissional está pronto para realizar este projeto</span>
         </ResponseInfo>
         <Button><span>Ver {this.state.offerCount} proposta</span></Button>
-        <Link href={this.props.newRequest}>Fazer novo pedido</Link>
-    </Wrapper>);
+        <LinkWrapper>
+          <Link href={this.props.newRequest}>Fazer novo pedido</Link>
+        </LinkWrapper>
+      </Wrapper>);
   }
 }
 
